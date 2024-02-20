@@ -1,0 +1,401 @@
+{
+	"info": {
+		"_postman_id": "85b84b95-b570-4cd7-a5ff-6dc4251042a3",
+		"name": "Project API Trello",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15044176"
+	},
+	"item": [
+		{
+			"name": "Creation of a new boards",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/boards/?name=Tablica z API&key={{key}}&token={{token}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Tablica z API"
+						},
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Showing a list of boards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/members/me/boards?key={{key}}&token={{token}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"members",
+						"me",
+						"boards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creating a new list",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/boards/6391cd2131b4f0020d163950/lists?key={{key}}&token={{token}}&name=W trakcie testów",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"boards",
+						"6391cd2131b4f0020d163950",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "name",
+							"value": "W trakcie testów"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Showing the list of available lists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/boards/6391cd2131b4f0020d163950/lists?key={{key}}&token={{token}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"boards",
+						"6391cd2131b4f0020d163950",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creating a new card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/cards?idList=6391d47f0489c20403b11992&key={{key}}&token={{token}}&name=Nie działa system logowania",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"cards"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "6391d47f0489c20403b11992"
+						},
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "name",
+							"value": "Nie działa system logowania"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Showing the list of created cards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/boards/6391cd2131b4f0020d163950/cards?key={{key}}&token={{token}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"boards",
+						"6391cd2131b4f0020d163950",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Card update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/cards/6391d78a72290c024515d963?key=87f34bd24c8a3555cd4d1993d311de8f&token=7f90b77960d80ac3d1eca34d490c86faf2121189c652de65620ee7dd7722487d&name=Nie działa system rejestracji",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"cards",
+						"6391d78a72290c024515d963"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "87f34bd24c8a3555cd4d1993d311de8f"
+						},
+						{
+							"key": "token",
+							"value": "7f90b77960d80ac3d1eca34d490c86faf2121189c652de65620ee7dd7722487d"
+						},
+						{
+							"key": "name",
+							"value": "Nie działa system rejestracji"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update card description",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/cards/6391d78a72290c024515d963?key=87f34bd24c8a3555cd4d1993d311de8f&token=7f90b77960d80ac3d1eca34d490c86faf2121189c652de65620ee7dd7722487d&name=Nie działa system rejestracji&desc=Użytkownik nie ma możliwości zalogowania się",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"cards",
+						"6391d78a72290c024515d963"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "87f34bd24c8a3555cd4d1993d311de8f"
+						},
+						{
+							"key": "token",
+							"value": "7f90b77960d80ac3d1eca34d490c86faf2121189c652de65620ee7dd7722487d"
+						},
+						{
+							"key": "name",
+							"value": "Nie działa system rejestracji"
+						},
+						{
+							"key": "desc",
+							"value": "Użytkownik nie ma możliwości zalogowania się"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creating the second card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/cards?idList=6391cd2131b4f0020d163958&key=87f34bd24c8a3555cd4d1993d311de8f&token=7f90b77960d80ac3d1eca34d490c86faf2121189c652de65620ee7dd7722487d&name=Nie działa system wyszukiwarki",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"cards"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "6391cd2131b4f0020d163958"
+						},
+						{
+							"key": "key",
+							"value": "87f34bd24c8a3555cd4d1993d311de8f"
+						},
+						{
+							"key": "token",
+							"value": "7f90b77960d80ac3d1eca34d490c86faf2121189c652de65620ee7dd7722487d"
+						},
+						{
+							"key": "name",
+							"value": "Nie działa system wyszukiwarki"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creating the third card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/cards?idList=6391cd2131b4f0020d163959&key={{key}}&token={{token}}&name=Nie działa system logowania",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"cards"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "6391cd2131b4f0020d163959"
+						},
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "name",
+							"value": "Nie działa system logowania"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete creating card",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/cards/6394d78a1e21d2001cdea55a?key={{key}}&token={{token}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"cards",
+						"6394d78a1e21d2001cdea55a"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://api.trello.com/1",
+			"type": "string"
+		}
+	]
+}
